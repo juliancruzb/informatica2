@@ -1,0 +1,8 @@
+Adjuntar un documento donde describa lo siguiente:
+- Descripción de su proyecto.
+    * Justificación.
+    * Motivación.
+    * Desafíos a afrontar.
+    * Descripción de las distintas partes que tendrá su proyecto con una idea de como las imaginan.
+
+Adjuntar el enlace al repositorio creado para el desarrollo de su proyecto final. Allí debe haber una capeta de documentación en la cual se va a poder encontrar el documento solicitado para ésta tarea.
