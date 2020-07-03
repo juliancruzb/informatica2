@@ -1,29 +1,43 @@
 \documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{multicol}
-\bibliography{int_references}
+\usepackage{biblatex}
+\usepackage{ragged2e} 
+\addbibresource{int_references.bib}
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	left=25mm,
+	right=20mm,
+	top=25mm,
+	bottom=20mm,
+}
 %opening
 \title{Investigación: Interrupciones en microprocesadores}
 \author{Cruz Buitrago, Edgar Julian \\ julian.cruz1@udea.edu.co \\ Facultad de Ingeniería \\ Universidad de Antioquia \\ Medellín, Antioquia}
 \date{Julio 2020}
 \begin{document}
-
-\maketitle
-\begin{multicols}{2}
-	\begin{abstract}		
-		
-	\end{abstract}
 	
-	\section{Definición}
+	\maketitle
+	\begin{multicols}{2}
+		\justify
+		\begin{abstract}		
+			Las interrupciones son una parte vital de la secuenciación de una computadora moderna. Fueron desarrollados para el manejo de excepciones y luego se aplicaron a eventos de entrada y salida. Hoy en día no se concibe ningún sistema que no deba implementar interrupciones para garantizar su buen funcionamiento.
+		\end{abstract}
+		{\smallskip \keywords Palabras clave: c++, qt, interrupciones, microprocesadores.}
+		\section{Definición}
 		Una interrupción es una señal que hace que un microprocesador trabaje temporalmente en una tarea diferente y luego vuelva a su tarea que tenía en curso.\cite{wikibooks}  Dicha señal es conocida como una solicitud de interrupción o IRQ por sus siglas en inglés; y son procesadas por un controlador de interrupciones, también llamado rutina de servicio de interrupción, o ISR por sus siglas en inglés.\cite{techterms}  Las interrupciones son de gran utilidad para dar atención a situaciones que requieren un tratamiento diferente o que inciden en el comportamiento de un sistema.
-	\section{Antecedentes}
+		\section{Antecedentes}
 		Consultando la historia de las interrupciones nos encontramos con dos sistemas que son referenciados como los primeros en utilizarlas; el primero de ellos la UNIVAC 1103 (1953) el cual es citado en el libro de Bell y Newell, en una linea de tiempo de la computación en la categoría de procesamiento concurrente\cite{history2}.  A pesar de que en el manual de la UNIVAC 1103\cite{history3} no se describen las interrupciones, publicaciones posteriores realizadas por los laboratorios que tuvieron acceso a ella dan evidencia de implementaciones para múltiples dispositivos de entrada y salida; sin embargo otros autores citan a la UNIVAC I (1951) como el primer sistema en implementar la interrupciones ya que contaba con un manejo de excepciones para el desbordamiento aritmético.  Más adelante aparece el primer uso de enmascaramiento de interrupción en la IBM 650 (1954), las primeras interrupciones de entrada y salida en la NBS DYSEAC (1954) y la captura de saltos o transferencias como fue llamado en su época en la IBM 704 (1955).\cite{history}
-	\section{Clasificación}
+		\section{Clasificación}
 		Existen diferentes formas de clasificar las interrupciones, por ejemplo, según su fuente clasificarlas en interrupciones internas o externas, comúnmente categorizadas como de software y de hardware respectivamente\cite{mym}, pero en materia de microprocesadores un mayor entendimiento se puede dar indicando que la ejecución secuencial de instrucciones en un microprocesador puede ser interrumpida (i) por el mismo procesador, (ii) por una instrucción de interrupción (software) o (iii) por una señal de interrupción de hardware\cite{pcbased}.\\
 		Cuando ocurre una interrupción, normalmente el procesador efectúa lo siguiente: 1. Los contenidos del contador de programa deben ser almacenados de forma que sean recuperables cuando la CPU pueda volver al punto en el que fue interrumpida; 2. El contador de programa se carga con la dirección de la rutina de servicio de la interrupción; 3. Algunos de los registros de la CPU que se necesiten en la rutina de la interrupción deben ser almacenados temporalmente al principio de la rutina, para ser recuperados al final de ella, este almacenamiento normalmente se hace en el stack; 4. Una vez efectuada la rutina de la interrupción, se restablecen los valores de los registros y del contador de programa y el procesador vuelve otra vez al punto del programa en que fue interrumpido\cite{edymicrop}.
-	\section{Aplicación en Software}
+		\section{Aplicación en Software}
 		A nivel de lenguajes de programación es muy común el uso de interrupciones y varían según las clases implementadas o la filosofía del lenguaje; por ejemplo en el desarrollo del curso de INFORMATICA II, se fueron implementando diferentes tipos de interrupciones quizás sin ahondar en sus conceptos, acá algunos ejemplos: en la captura por teclado el comando "cin" de la librería estándar solo termina la lectura hasta que la tecla ENTER sea presionada, en las implementaciones realizadas con las interfaces gráficas de QT, utilizamos timers que al cumplir cierto tiempo desencadenaban en otra acción o función. Estos son algunos ejemplos sencillos pero que dan a evidenciar la utilidad de las interrupciones.
-	\section{Ejemplo}
-		Fue implementado el ejemplo de arduino en la siguiente URL: https://www.tinkercad.com/things/bDHqkZy8Wdc.
-\end{multicols}
-
+		\section{Ejemplo}
+		Fue implementado el ejemplo de arduino en la siguiente URL: \\https://www.tinkercad.com/things/bDHqkZy8Wdc.
+		\printbibliography
+	\end{multicols}
+	
 \end{document}
