@@ -16,10 +16,36 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Arma.cpp \
+    Ayuda.cpp \
+    Cientifico.cpp \
+    Consola.cpp \
+    DataConnector.cpp \
+    Enemigo.cpp \
+    Explosivo.cpp \
+    Jugador.cpp \
+    Nivel.cpp \
+    Obstaculo.cpp \
+    Partida.cpp \
+    Personaje.cpp \
+    Proyectil.cpp \
     main.cpp \
     juego.cpp
 
 HEADERS += \
+    Arma.h \
+    Ayuda.h \
+    Cientifico.h \
+    Consola.h \
+    DataConnector.h \
+    Enemigo.h \
+    Explosivo.h \
+    Jugador.h \
+    Nivel.h \
+    Obstaculo.h \
+    Partida.h \
+    Personaje.h \
+    Proyectil.h \
     juego.h
 
 FORMS += \
