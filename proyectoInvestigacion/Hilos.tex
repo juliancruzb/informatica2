@@ -1,0 +1,44 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{biblatex}
+\usepackage{ragged2e} 
+\addbibresource{hil_references.bib}
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	left=25mm,
+	right=20mm,
+	top=25mm,
+	bottom=20mm,
+}
+%opening
+\title{Investigación: Hilos en microprocesadores}
+\author{Cruz Buitrago, Edgar Julian \\ julian.cruz1@udea.edu.co \\ Facultad de Ingeniería \\ Universidad de Antioquia \\ Medellín, Antioquia}
+\date{Julio 2020}
+\begin{document}
+	
+	\maketitle
+	\begin{multicols}{2}
+		\justify
+		\begin{abstract}		
+			Las interrupciones son una parte vital de la secuenciación de una computadora moderna. Fueron desarrollados para el manejo de excepciones y luego se aplicaron a eventos de entrada y salida. Hoy en día no se concibe ningún sistema que no deba implementar interrupciones para garantizar su buen funcionamiento.
+		\end{abstract}
+		{\smallskip \keywords Palabras clave: c++, qt, hilos, microprocesadores.}
+		\section{Definición}
+		Un hilo puede ser definido como el flujo de instrucciones para realizar una tarea.\cite{jesgargardon}  Los hilos son ejecutados por los procesos y se pueden ejecutar individualmente mientras comparten sus recursos; pero ejecutar varios hilos dependerá de si el proceso fue diseñado de esa manera.  Las hilos son de gran utilidad para reducir los tiempos de proceso y eficientar el rendimiento de un programa.\cite{whatsabyte}
+		\section{Antecedentes}
+		La evolución de las computadoras mantiene una constante búsqueda de mejorar el rendimiento de las mismas, al principio apoyado por la aparición de transistores más rápidos y mas pequeños, se opto por técnicas como: a) Aumentar el ancho de banda de los datos que se procesan. b) Utilizar circuitos combinatorios rápidos, como sumadores o multiplicadores. c) Crear archivos de registro más grande. d) Aumentar la memoria cache en los chip; pero todo esto aplicado para un solo procesador fue evidenciando algunas limitantes en la velocidad del reloj, porque a mas velocidad de reloj, es requerido mas potencia y aparecen problemas de disipación de calor. Fue por esto que empezo a abordarse los conceptos de paralelismo, donde multiples subprocesos se ejecuten en paralelo y se empiezan a hablar de multiples hilos de ejecución. \cite{history2} En el articulo "Historia de multihilos" de Mark Smotherman\cite{history1} nos muestra una linea de tiempo acerca del uso hilos en los microprocesadores donde vemos que aparecen desde la decada de los 50 y cada vez mas capacidades segun las capacidades de la electronica mejoraban. 
+		\section{Clasificación}
+		Existen las siguientes categorías en la implementación de los hilos:\\
+		Hilos a nivel de núcleo (KLT por sus siglas en ingles Kernel Level Thread) son creados por el usuario en una equivalencia 1 a 1 con entidades de procesamiento en el kernel\cite{wiki}.\\
+		Hilos a nivel de usuario (ULT por sus siglas en ingles User Level Thread) 
+		\section{Aplicación en Software}
+		
+		\section{Ejemplo}
+		
+		\printbibliography
+	\end{multicols}
+	
+\end{document}

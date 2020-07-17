@@ -1,0 +1,6 @@
+- ¿Qué es una hilo en el contexto de los microprocesadores?
+- ¿Se puede hablar de la historia de los hilos?
+- ¿Que tipo de hilos existen?
+- ¿Cómo se hace la implementación de hilos a nivel de hardware?
+- ¿Cómo se implementan los hilos por software? Debe quedar claro si el lenguaje de programación importa y si el hardware usado afecta.
+- Mostrar un ejemplo de implementación de hilos usando lenguaje C++. Describir las diferentes partes del código que se deben tener en cuenta para el correcto funcionamiento de los hilos. Esta parte es opcional.

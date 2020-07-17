@@ -1,10 +1,10 @@
 /**
- * Project Scientist Scape
+ * Project Scientist Escape
  */
-
 
 #ifndef _PERSONAJE_H
 #define _PERSONAJE_H
+
 
 class Personaje {
 public: 
